@@ -47,7 +47,7 @@ The system runs real-time multi-sensor fusion on a single deterministic I²C bus
 
 <p align="center">
   <img src="/assets/images/fusion-decision-flow.png" width="800"><br/>
-  <i>SSD1306 OLED artificial horizon and cabin climate panels</i>
+  <i>Dual-Factor Crash Fusion Decision Loop</i>
 </p>
 
 ### Videos
