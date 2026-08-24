@@ -2,7 +2,13 @@
 publishDate: 2026-08-23
 title: Interrupt Zero — Edge-Fused In-Cabin Telematics Hub for Active V2X Hazard Mitigation and Touchless HMI
 excerpt: A dual-core ESP32 telematics hub that fuses inertial and pneumatic sensor data to eliminate false-positive crash alerts, paired with an interrupt-driven touchless gesture HMI.
-image: /assets/images/cover.png
+---
+
+<p align="center">
+  <img src="/assets/images/cover.png" width="800"><br/>
+</p>
+
+---
 tags:
   - MYOSA
   - ESP32
