@@ -8,16 +8,15 @@ excerpt: A dual-core ESP32 telematics hub that fuses inertial and pneumatic sens
   <img src="/assets/images/cover.png" width="800"><br/>
 </p>
 
----
+> Fusing motion and pressure at the edge to tell a real crash from a pothole — without ever touching a button.
+
+
 tags:
   - MYOSA
   - ESP32
   - Automotive
   - SensorFusion
   - IEEE
----
-
-> Fusing motion and pressure at the edge to tell a real crash from a pothole — without ever touching a button.
 
 ---
 
