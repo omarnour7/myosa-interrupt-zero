@@ -131,15 +131,33 @@ if (accelMagnitude > 4.5 && pressureDerivative > dP_THRESHOLD) {
 ---
 
 ## Tech Stack
+**Hardware**
 
-* **MYOSA Mini IoT Kit** — dual-core ESP32 motherboard (240 MHz)
-* **MPU6050** — inertial measurement (I²C 0x68)
-* **BMP180** — barometric pressure/temperature (I²C 0x77)
-* **APDS9960** — gesture & ambient light (I²C 0x39, interrupt-driven)
-* **SSD1306** — 128x64 monochrome OLED (I²C 0x3C)
-* **FreeRTOS** — dual-core task pinning (sensing on Core 0, HMI/BLE on Core 1)
-* **Bluetooth Low Energy (BLE)** — async telemetry sync to the MYOSA Android app
-* **PlatformIO / Arduino-ESP32** — firmware build & flashing
+* MYOSA Mini IoT Kit — dual-core ESP32 motherboard (240 MHz)
+* MPU6050 — inertial measurement (I²C 0x68)
+* BMP180 — barometric pressure/temperature (I²C 0x77)
+* APDS9960 — gesture & ambient light (I²C 0x39, interrupt-driven)
+* SSD1306 — 128x64 monochrome OLED (I²C 0x3C)
+
+**Embedded / Firmware**
+
+* FreeRTOS — dual-core task pinning (sensing on Core 0, HMI/BLE on Core 1)
+* PlatformIO / Arduino-ESP32 — firmware build & flashing
+
+**Communication**
+
+* I²C (Fast Mode, 400 kHz) — sensor bus
+* Bluetooth Low Energy (BLE) — telemetry sync (firmware-side complete)
+
+**Mobile / Software**
+
+* Flutter — cross-platform companion app for telemetry, forensic export, alerts (in development)
+
+**Math / Signal Processing (implemented in firmware, not a library)**
+
+* Complementary filter (pitch/roll estimation)
+* Discrete derivative (dP/dt pressure tracking)
+* Dual-threshold sensor fusion logic
 
 ---
 
