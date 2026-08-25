@@ -61,6 +61,16 @@ The system runs real-time multi-sensor fusion on a single deterministic I²C bus
   <i>Scenario B -True Accident</i>
 </p>
 
+<p align="center">
+  <img src="/assets/images/dashboard.png" width="800"><br/>
+  <i>Stable Dashboard</i>
+</p>
+
+<p align="center">
+  <img src="/assets/images/crash-dashboard.png" width="800"><br/>
+  <i>Accident Dashboard</i>
+</p>
+
 ### Videos
 
 [![Watch Demo Video](/assets/images/video-thumbnail.png)](/assets/videos/interrupt-zero-myosa.mp4)
