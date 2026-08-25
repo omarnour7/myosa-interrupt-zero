@@ -47,13 +47,18 @@ The system runs real-time multi-sensor fusion on a single deterministic I²C bus
 ### Images
 
 <p align="center">
-  <img src="/assets/images/interrupt-zero/system-architecture.jpg" width="800"><br/>
-  <i>System architecture — sensor array on shared I²C bus, dual-core ESP32 task split</i>
+  <img src="/assets/images/fusion-decision-flow.png" width="800"><br/>
+  <i>Dual-Factor Crash Fusion Decision Loop</i>
 </p>
 
 <p align="center">
-  <img src="/assets/images/fusion-decision-flow.png" width="800"><br/>
-  <i>Dual-Factor Crash Fusion Decision Loop</i>
+  <img src="/assets/images/scenario-a.png" width="800"><br/>
+  <i>Scenario A -Road Anomaly</i>
+</p>
+
+<p align="center">
+  <img src="/assets/images/scenario-b.png" width="800"><br/>
+  <i>Scenario B -True Accident</i>
 </p>
 
 ### Videos
