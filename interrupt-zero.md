@@ -200,6 +200,26 @@ Wire (built-in, no install needed)
 MIT License — see `LICENSE` file in the repository.
 
 ---
+## Novelty
+
+Interrupt Zero introduces several distinct contributions beyond conventional single-sensor crash detection systems:
+
+* **Dual-Factor Crash Validation (Inertial + Pneumatic)**
+Unlike standalone accelerometer-based systems that flag potholes and curb strikes as accidents, Interrupt Zero cross-validates high-G impact events against transient cabin pressure changes — eliminating false positives without sacrificing detection speed.
+
+* **Deterministic Dual-Core Task Isolation**
+Safety-critical fusion math runs entirely isolated on Core 0, while HMI rendering and BLE communication run on Core 1 — guaranteeing the accident-detection loop is never delayed by display or radio I/O, a separation many hobbyist-grade IoT safety projects don't enforce.
+
+* **Fully Touchless, Interrupt-Driven HMI**
+Rather than continuous sensor polling (which wastes cycles and power), the gesture interface wakes only on proximity via a dedicated interrupt line — enabling zero-distraction driver interaction with near-zero idle overhead.
+
+* **Local Black-Box Fail-Safe**
+Even if wireless connectivity or the companion app fails, critical crash telemetry remains readable directly on the onboard OLED — ensuring diagnostic data survives independent of network conditions.
+
+* **Low-Cost, Modular Hardware Realization**
+Built entirely on plug-and-play MYOSA modules with standard JST connectors, the system proves that dual-factor crash validation — typically found in expensive proprietary automotive ECUs — can be replicated on accessible, modular, education-grade hardware.
+
+---
 
 ## Contribution Notes (Optional)
 
