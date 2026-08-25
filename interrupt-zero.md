@@ -11,7 +11,7 @@ excerpt: A dual-core ESP32 telematics hub that fuses inertial and pneumatic sens
 
 
 
-tags:
+**tags:**
   - MYOSA
   - ESP32
   - Automotive
