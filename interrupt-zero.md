@@ -187,15 +187,32 @@ Wire (built-in, no install needed)
 ## File Structure (Optional)
 
 ```
-/interrupt-zero
-  ├─ src/
-  │   ├─ main.cpp
-  │   ├─ fusion.cpp
-  │   ├─ hmi.cpp
-  │   └─ ble_sync.cpp
-  ├─ include/
-  ├─ platformio.ini
-  └─ README.md
+myosa-interrupt-zero/
+├── interrupt-zero.md
+├── firmware/
+│   └── interrupt_zero/
+│       └── interrupt_zero.ino
+├── flutter_app/
+│   ├── lib/
+│   ├── android/
+│   ├── ios/
+│   ├── assets/
+│   ├── test/
+│   ├── pubspec.yaml
+│   ├── pubspec.lock
+│   ├── .metadata
+│   ├── .gitignore
+│   ├── analysis_options.yaml
+│   └── README.md
+└── assets/
+    ├── images/
+    │   ├── cover.png
+    │   ├── system-architecture.png
+    │   ├── fusion-decision-flow.png
+    │   ├── timing-comparison.png
+    │   └── video-thumbnail.png
+    └── videos/
+        └── interrupt-zero-myosa.mp4
 ```
 
 ---
