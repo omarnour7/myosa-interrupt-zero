@@ -63,9 +63,7 @@ The system runs real-time multi-sensor fusion on a single deterministic I²C bus
 
 ### Videos
 
-<video controls width="100%">
-  <source src="https://raw.githubusercontent.com/omarnour7/myosa-interrupt-zero/main/assets/videos/interrupt-zero-myosa.mp4" type="video/mp4">
-</video>
+[![Watch Demo Video](/assets/images/video-thumbnail.png)](/interrupt-zero-myosa.mp4)
 
 ---
 
