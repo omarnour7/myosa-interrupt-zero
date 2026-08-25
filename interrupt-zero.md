@@ -95,18 +95,20 @@ Standalone accelerometers are prone to false-positive accident flags on potholes
 
   A high-G spike without a matching pressure spike (e.g., a heavy pothole) is filtered out as a routine road anomaly.
 
-### **3. Touchless, Interrupt-Driven HMI**
+### **3. Touchless, Interrupt-Driven HMI (Design)**
 
-Instead of continuously polling the APDS9960 gesture sensor over I²C, its interrupt pin is wired directly to an external interrupt-enabled GPIO. The gesture engine stays fully asleep until a hand enters the 10 cm proximity envelope, waking an isolated ISR on Core 1. Gestures are decoded via a software state machine:
+The gesture interface is architected around the APDS9960's interrupt pin, wired directly to an external interrupt-enabled GPIO instead of continuous I²C polling. The gesture engine is designed to stay fully asleep until a hand enters the 10 cm proximity envelope, waking an isolated ISR on Core 1. Gestures are decoded via a software state machine:
 
 * **Swipe Left/Right** — switch between OLED telemetry panels (artificial horizon w/ angular roll, and cabin climate/ambient light index)
 * **Swipe Up/Down** — acknowledge and clear minor threshold alerts without requiring visual attention
+
+*This subsystem is implemented at the firmware/wiring level; full end-to-end gesture calibration is ongoing.*
 
 ### **4. Black-Box Fail-Safe & Mobile Sync**
 
 Under normal operation, the SSD1306 draws a live graphical dashboard. The instant the fusion loop confirms a crash, the firmware halts normal rendering and enters an **Emergency Black-Box Routine**, freezing peak acceleration, force vectors, and pressure deltas on-screen — readable even if the vehicle loses connection to the main infotainment system.
 
-In parallel, telemetry is packed into binary arrays and streamed over BLE to the MYOSA Android app. When the app detects the Critical Accident Flag, it compiles the local telemetry log, auto-exports the 5-second pre-impact data stream to `.xlsx` for forensic review, and triggers emergency location sharing.
+In parallel, telemetry is packed into binary arrays for streaming over BLE to our companion **Flutter app**, which — once integration is complete — will compile the local telemetry log, auto-export the 5-second pre-impact data stream to `.xlsx` for forensic review, and trigger emergency location sharing. The BLE payload format and firmware-side packet assembly are implemented; app-side integration is in progress.
 
 ---
 
