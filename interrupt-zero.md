@@ -174,7 +174,7 @@ Adafruit SSD1306
 Adafruit GFX Library
 SparkFun APDS9960 RGB and Gesture Sensor
 Adafruit BMP085 Library
-Wire
+Wire (built-in, no install needed)
 ```
 
 ---
